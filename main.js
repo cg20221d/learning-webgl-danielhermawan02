@@ -3,18 +3,26 @@ function main() {
     var gl = kanvas.getContext("webgl");
 
     var vertices = [ 
-        0.0, 0.0,
+        // 0.0, 0.0,
         -0.5, 0.9,
         // -0.5, 0.5,
-        -0.25, 0.5,
-        -0.75, 0.5,
+        // -0.25, 0.5,
+        // -0.75, 0.5,
         -0.1, 0.1,
+        -0.25, 0.1,
+        -0.5, 0.4,
+        -0.75, 0.1,
         -0.9, 0.1,
+        -0.5, 0.9,
+
+        // -0.5, 0.1,
         
+
         0.1, 0.1,
         0.1, 0.9,
         0.9, 0.9,
         0.9, 0.1,
+
 
         -0.25, -0.1,
         -0.8, -0.1,
@@ -23,6 +31,7 @@ function main() {
         //-0.525, -0.525, // center
         -0.25, -0.525,
         -0.8, -0.525,
+
 
         0.25, -0.1,
         0.8, -0.1,
@@ -119,5 +128,5 @@ function main() {
     gl.enableVertexAttribArray(aPosition);
     gl.clearColor(1.0, 0.65, 0.0, 1.0); // Red , Green , Blue , Alpha
     gl.clear(gl.COLOR_BUFFER_BIT);
-    gl.drawArrays(gl.TRIANGLES_FAN, 0, 40); // Berapa banyak iterasi yang diperlukan untuk menggambar
+    gl.drawArrays(gl.LINE_STRIP, 0, 20); // Berapa banyak iterasi yang diperlukan untuk menggambar
 }
