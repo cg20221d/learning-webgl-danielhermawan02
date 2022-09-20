@@ -2,12 +2,72 @@ function main() {
     var kanvas = document.getElementById("kanvas");
     var gl = kanvas.getContext("webgl");
 
-    var vertices = [
-        0.5, 0.5, 
-        0.0, 0.0, 
-        -0.5, 0.5,
-        0.0, 1.0  
+    var vertices = [ 
+        0.0, 0.0,
+        -0.5, 0.9,
+        // -0.5, 0.5,
+        -0.25, 0.5,
+        -0.75, 0.5,
+        -0.1, 0.1,
+        -0.9, 0.1,
+        
+        0.1, 0.1,
+        0.1, 0.9,
+        0.9, 0.9,
+        0.9, 0.1,
+
+        -0.25, -0.1,
+        -0.8, -0.1,
+        -0.8, -0.9,
+        -0.25, -0.9,
+        //-0.525, -0.525, // center
+        -0.25, -0.525,
+        -0.8, -0.525,
+
+        0.25, -0.1,
+        0.8, -0.1,
+        0.55, -0.9
+        
     ];
+
+    var letterA = [
+        0.0, 0.0,
+        -0.5, 0.9,
+        // -0.5, 0.5,
+        -0.25, 0.5,
+        -0.75, 0.5,
+        -0.1, 0.1,
+        -0.9, 0.1 
+    ]
+
+    var letterN = [
+        0.1, 0.1,
+        0.1, 0.9,
+        0.9, 0.9,
+        0.9, 0.1
+    ]
+
+    var number8 = [
+        -0.25, -0.1,
+        -0.8, -0.1,
+        -0.8, -0.9,
+        -0.25, -0.9,
+        //-0.525, -0.525, // center
+        -0.25, -0.525,
+        -0.8, -0.525
+    ]
+
+    var numer7 = [
+        0.25, -0.1,
+        0.8, -0.1,
+        0.55, -0.9
+    ]
+
+        // Initial Value
+        // 0.5, 0.5, 
+        // 0.0, 0.0, 
+        // -0.5, 0.5,
+        // 0.0, 1.0
 
     var buffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
@@ -57,9 +117,7 @@ function main() {
     var aPosition = gl.getAttribLocation(shaderProgram, "aPosition");
     gl.vertexAttribPointer(aPosition, 2, gl.FLOAT, false, 0, 0);
     gl.enableVertexAttribArray(aPosition);
-
     gl.clearColor(1.0, 0.65, 0.0, 1.0); // Red , Green , Blue , Alpha
     gl.clear(gl.COLOR_BUFFER_BIT);
-    gl.drawArrays(gl.TRIANGLES_FAN, 0, 3); // Berapa banyak iterasi yang diperlukan untuk menggambar
-
+    gl.drawArrays(gl.TRIANGLES_FAN, 0, 40); // Berapa banyak iterasi yang diperlukan untuk menggambar
 }
