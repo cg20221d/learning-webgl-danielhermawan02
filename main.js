@@ -3,6 +3,7 @@ function main() {
     var gl = kanvas.getContext("webgl");
 
     var vertices = [ 
+        // huruf A
         // 0.0, 0.0,
         -0.5, 0.9,
         // -0.5, 0.5,
@@ -10,14 +11,23 @@ function main() {
         // -0.75, 0.5,
         -0.1, 0.1,
         -0.25, 0.1,
-        -0.5, 0.4,
+        // -0.5, 0.4,
+        -0.5, 0.9,
         -0.75, 0.1,
         -0.9, 0.1,
         -0.5, 0.9,
 
-        // -0.5, 0.1,
-        
+        -0.75, 0.4,
+        -0.3, 0.4,
+        -0.35, 0.45,
 
+        -0.75, 0.4,
+        -0.3, 0.45,
+        -0.7, 0.45,
+
+        // -0.5, 0.1,
+
+        // HURUF N
         0.1, 0.1,
         0.1, 0.9,
         0.9, 0.9,
@@ -98,8 +108,10 @@ function main() {
     gl.clearColor(1.0, 0.65, 0.0, 1.0); // Red , Green , Blue , Alpha
     gl.clear(gl.COLOR_BUFFER_BIT);
     //gl.drawArrays(gl.LINE_STRIP, 0, 70); // Berapa banyak iterasi yang diperlukan untuk menggambar
-    gl.drawArrays(gl.LINE_STRIP, 0, 7);
-    gl.drawArrays(gl.LINE_STRIP, 7, 4);
-    gl.drawArrays(gl.LINE_STRIP, 11, 8);
-    gl.drawArrays(gl.LINE_STRIP, 19, 3);
+    gl.drawArrays(gl.TRIANGLES, 0, 7);
+    gl.drawArrays(gl.TRIANGLES, 7, 3);
+    gl.drawArrays(gl.TRIANGLES, 10, 3);
+    // gl.drawArrays(gl.LINE_STRIP, 7, 4);
+    // gl.drawArrays(gl.LINE_STRIP, 11, 8);
+    // gl.drawArrays(gl.LINE_STRIP, 19, 3);
 }
