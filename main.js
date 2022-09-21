@@ -24,53 +24,22 @@ function main() {
         0.9, 0.1,
 
         
-        -0.25, -0.1,
-        -0.8, -0.1,
-        -0.8, -0.9,
-        -0.25, -0.9,
-        //-0.525, -0.525, // center
-        -0.25, -0.525,
-        -0.8, -0.525,
+        -0.8, -0.9, // urutan 1
+        -0.3, -0.9, // urutan 2
+        // -0.525, -0.525, // center
+        -0.3, -0.525, // urutan 3
+        -0.8, -0.525, // urutan 4
+        -0.8, -0.9, // urutan 5 (tutup loop)
+        -0.8, -0.1, // urutan 6
+        -0.3, -0.1, // urutan 7
+        -0.3, -0.525, // urutan 8
 
         
-        // 0.25, -0.1,
-        // 0.8, -0.1,
-        // 0.55, -0.9
-        
-    ];
-
-    var letterA = [
-        0.0, 0.0,
-        -0.5, 0.9,
-        // -0.5, 0.5,
-        -0.25, 0.5,
-        -0.75, 0.5,
-        -0.1, 0.1,
-        -0.9, 0.1 
-    ]
-
-    var letterN = [
-        0.1, 0.1,
-        0.1, 0.9,
-        0.9, 0.9,
-        0.9, 0.1
-    ]
-
-    var number8 = [
-        -0.25, -0.1,
-        -0.8, -0.1,
-        -0.8, -0.9,
-        -0.25, -0.9,
-        //-0.525, -0.525, // center
-        -0.25, -0.525,
-        -0.8, -0.525
-    ]
-
-    var numer7 = [
         0.25, -0.1,
         0.8, -0.1,
         0.55, -0.9
-    ]
+        
+    ];
 
         // Initial Value
         // 0.5, 0.5, 
@@ -128,8 +97,9 @@ function main() {
     gl.enableVertexAttribArray(aPosition);
     gl.clearColor(1.0, 0.65, 0.0, 1.0); // Red , Green , Blue , Alpha
     gl.clear(gl.COLOR_BUFFER_BIT);
-    gl.drawArrays(gl.LINE_STRIP, 0, 7); // Berapa banyak iterasi yang diperlukan untuk menggambar
+    //gl.drawArrays(gl.LINE_STRIP, 0, 70); // Berapa banyak iterasi yang diperlukan untuk menggambar
+    gl.drawArrays(gl.LINE_STRIP, 0, 7);
     gl.drawArrays(gl.LINE_STRIP, 7, 4);
-    gl.drawArrays(gl.LINE_STRIP, 13, 10);
-    // gl.drawArrays(gl.LINE_STRIP, 16, 3);
+    gl.drawArrays(gl.LINE_STRIP, 11, 8);
+    gl.drawArrays(gl.LINE_STRIP, 19, 3);
 }
