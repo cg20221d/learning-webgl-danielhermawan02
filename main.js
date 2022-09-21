@@ -23,7 +23,7 @@ function main() {
         0.9, 0.9,
         0.9, 0.1,
 
-
+        
         -0.25, -0.1,
         -0.8, -0.1,
         -0.8, -0.9,
@@ -32,10 +32,10 @@ function main() {
         -0.25, -0.525,
         -0.8, -0.525,
 
-
-        0.25, -0.1,
-        0.8, -0.1,
-        0.55, -0.9
+        
+        // 0.25, -0.1,
+        // 0.8, -0.1,
+        // 0.55, -0.9
         
     ];
 
@@ -128,5 +128,8 @@ function main() {
     gl.enableVertexAttribArray(aPosition);
     gl.clearColor(1.0, 0.65, 0.0, 1.0); // Red , Green , Blue , Alpha
     gl.clear(gl.COLOR_BUFFER_BIT);
-    gl.drawArrays(gl.LINE_STRIP, 0, 20); // Berapa banyak iterasi yang diperlukan untuk menggambar
+    gl.drawArrays(gl.LINE_STRIP, 0, 7); // Berapa banyak iterasi yang diperlukan untuk menggambar
+    gl.drawArrays(gl.LINE_STRIP, 7, 4);
+    gl.drawArrays(gl.LINE_STRIP, 13, 10);
+    // gl.drawArrays(gl.LINE_STRIP, 16, 3);
 }
