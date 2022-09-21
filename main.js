@@ -29,9 +29,28 @@ function main() {
 
         // HURUF N
         0.1, 0.1,
+        0.2, 0.1,
+        0.2, 0.9,
+
+        0.2, 0.9,
+        0.1, 0.1, 
         0.1, 0.9,
+
         0.9, 0.9,
         0.9, 0.1,
+        0.8, 0.1,
+
+        0.8, 0.1,
+        0.9, 0.9,
+        0.8, 0.9,
+
+        0.2, 0.9,
+        0.2, 0.8,
+        0.8, 0.1,
+
+        0.8, 0.1, 
+        0.8, 0.2,
+        0.2 , 0.9,
 
         
         -0.8, -0.9, // urutan 1
@@ -107,11 +126,18 @@ function main() {
     gl.enableVertexAttribArray(aPosition);
     gl.clearColor(1.0, 0.65, 0.0, 1.0); // Red , Green , Blue , Alpha
     gl.clear(gl.COLOR_BUFFER_BIT);
-    //gl.drawArrays(gl.LINE_STRIP, 0, 70); // Berapa banyak iterasi yang diperlukan untuk menggambar
+    //gl.drawArrays(gl.TRIANGLE, 0, 70); // Berapa banyak iterasi yang diperlukan untuk menggambar
     gl.drawArrays(gl.TRIANGLES, 0, 7);
     gl.drawArrays(gl.TRIANGLES, 7, 3);
     gl.drawArrays(gl.TRIANGLES, 10, 3);
-    // gl.drawArrays(gl.LINE_STRIP, 7, 4);
-    // gl.drawArrays(gl.LINE_STRIP, 11, 8);
-    // gl.drawArrays(gl.LINE_STRIP, 19, 3);
+
+    gl.drawArrays(gl.TRIANGLES, 13, 3);
+    gl.drawArrays(gl.TRIANGLES, 16, 3);
+    gl.drawArrays(gl.TRIANGLES, 19, 3);
+    gl.drawArrays(gl.TRIANGLES, 22, 3);
+    gl.drawArrays(gl.TRIANGLES, 25, 3);
+    gl.drawArrays(gl.TRIANGLES, 28, 3);
+
+    gl.drawArrays(gl.LINE_STRIP, 31, 8);
+    gl.drawArrays(gl.LINE_STRIP, 39, 3);
 }
